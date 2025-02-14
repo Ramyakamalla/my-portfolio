@@ -5,6 +5,12 @@ import '../styless/contact.css';
 import { motion } from 'framer-motion';
 import ResumeButton from './Resumebutton.js';
 
+import API_BASE_URL from "../config";
+
+fetch(`${API_BASE_URL}/api/your-endpoint`)
+  .then((res) => res.json())
+  .then((data) => console.log(data))
+  .catch((err) => console.error(err));
 
 
 const containerVariants = {
