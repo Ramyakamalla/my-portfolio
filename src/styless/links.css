@@ -1,0 +1,37 @@
+/* links.css */
+
+/* Container for the social media links */
+.social-media-container {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Center the icons vertically */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 30px; /* Space between icons */
+    position: fixed; /* Fixed positioning to stay in the top right corner */
+    top: 10px; /* Distance from the top of the screen */
+    right: 60px; /* Distance from the right edge of the screen */
+    width: auto; /* Auto width to fit content */
+    z-index: 1000; /* Ensure it appears above other elements */
+    padding-top: 1%;
+  }
+  
+  /* Style for individual social media icon */
+  .social-media-icon {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .social-media-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .social-media-container {
+      gap: 10px; /* Reduce gap for smaller screens */
+      top: 5px; /* Adjust top position for smaller screens */
+      right: 5px; /* Adjust right position for smaller screens */
+    }
+  }
+  

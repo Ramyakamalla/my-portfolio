@@ -1,0 +1,74 @@
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.contact-form-container {
+  max-width: 400px; /* Reduced width */
+  width: 100%;
+  background: #dde7f0;
+  border-radius: 8px; /* Reduced border-radius */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Reduced padding */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.contact-form h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem; /* Reduced font size */
+  color: #333;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 10px; /* Reduced margin */
+  font-size: 0.9rem; /* Reduced font size */
+  color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: calc(100% - 20px);
+  padding: 8px; /* Reduced padding */
+  margin-top: 5px;
+  border: 1px solid;
+  border-radius: 4px; /* Reduced border-radius */
+  font-size: 0.9rem; /* Reduced font size */
+}
+
+.contact-form textarea {
+  height: 120px; /* Reduced height */
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  padding: 8px 16px; /* Reduced padding */
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px; /* Reduced border-radius */
+  color: #ffffff;
+  font-size: 0.9rem; /* Reduced font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.thank-you-message {
+  margin-top: 15px;
+  font-size: 30px; /* Reduced font size */
+  color: #4252da;
+}
+@media (max-width: 576px) {
+  .contact-section {
+      width: 100%; /* Full width on extra small screens */
+      padding: 10px; /* Adjust padding for extra small screens */
+  }
+}

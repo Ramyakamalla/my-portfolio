@@ -1,0 +1,25 @@
+/* particles.css */
+
+/* Ensure that the body and html take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling when particles are active */
+  }
+  
+  /* Fullscreen container for particles background */
+  #tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3; /* Keep the particles behind content */
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1; /* Ensure content stays above particles */
+    /* Add other styles to align your content accordingly */
+  }
+  

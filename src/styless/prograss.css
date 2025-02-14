@@ -1,0 +1,62 @@
+/* Container for each progress bar */
+.progress-bar-container {
+  width: 100%;
+  max-width: 1000px; /* Adjust as needed */
+  margin: 10px 0;
+  padding-left: 20%;
+}
+
+/* Progress bar itself */
+.progress-bar {
+  background-color: #d511eb;
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 2%;
+}
+
+/* Label for the progress bar */
+.progress-label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Value inside the progress bar */
+.progress-value {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .progress-bar-container {
+    max-width: 100%;
+  }
+  
+  .progress-label, .progress-value {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .progress-bar {
+    height: 30px;
+  }
+  
+  .progress-label, .progress-value {
+    font-size: 12px;
+  }
+}
