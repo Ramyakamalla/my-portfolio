@@ -7,11 +7,14 @@ import ResumeButton from './Resumebutton.js';
 
 import API_BASE_URL from "../config";
 
-fetch(`${API_BASE_URL}/api/contact`)
-  .then((res) => res.json())
-  .then((data) => console.log(data))
-  .catch((err) => console.error(err));
 
+  const BACKEND_URL = "https://my-portfolio-backend-1-778u.onrender.com";
+  fetch(`${BACKEND_URL}/api/contact`, { 
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, message })
+  })
+  
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -43,7 +46,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:4000/api/contact', { name, email, message });
+      await axios.post(`${API_BASE_URL}/api/contact`, { name, email, message });
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
