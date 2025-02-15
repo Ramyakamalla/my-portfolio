@@ -7,7 +7,7 @@ import ResumeButton from './Resumebutton.js';
 
 import API_BASE_URL from "../config";
 
-fetch(`${API_BASE_URL}/api/your-endpoint`)
+fetch(`${API_BASE_URL}/api/contact`)
   .then((res) => res.json())
   .then((data) => console.log(data))
   .catch((err) => console.error(err));

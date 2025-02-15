@@ -83,7 +83,7 @@ const HomeSection = () => {
 const AboutSection = () => {
   return (
     <div className="about-container">
-      <ParticlesBackground /> {/* Add interactive background effect */}
+    
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
