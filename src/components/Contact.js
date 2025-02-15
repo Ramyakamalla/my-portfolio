@@ -4,17 +4,7 @@ import axios from 'axios';
 import '../styless/contact.css';
 import { motion } from 'framer-motion';
 import ResumeButton from './Resumebutton.js';
-
 import API_BASE_URL from "../config";
-
-
-  const BACKEND_URL = "https://my-portfolio-backend-1-778u.onrender.com";
-  fetch(`${BACKEND_URL}/api/contact`, { 
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, email, message })
-  })
-  
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -25,6 +15,7 @@ const containerVariants = {
     },
   },
 };
+
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -63,36 +54,35 @@ const Contact = () => {
       variants={containerVariants}
       className="projects-section"
     >
-    <div className="contact-form-container">
-      {submitted ? (
-        <animated.div style={thankYouAnimation}>
-          <div className="thank-you-message">Thank you for your Time!😊</div>
-          
-        </animated.div>
-      ) : (
-        <animated.div style={formAnimation}>
-          <form onSubmit={handleSubmit} className="contact-form">
-            <h2>Get in touch!</h2>
-            <label>
-              Name:
-              <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
-            </label>
-            <label>
-              Email:
-              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-            </label>
-            <label>
-              Message:
-              <textarea value={message} onChange={(e) => setMessage(e.target.value)} required />
-            </label>
-            <button type="submit">Send Message</button>
-          </form>
-        </animated.div>
-      )}
-    </div><br></br>
-    <ResumeButton/>
+      <div className="contact-form-container">
+        {submitted ? (
+          <animated.div style={thankYouAnimation}>
+            <div className="thank-you-message">Thank you for your Time!😊</div>
+          </animated.div>
+        ) : (
+          <animated.div style={formAnimation}>
+            <form onSubmit={handleSubmit} className="contact-form">
+              <h2>Get in touch!</h2>
+              <label>
+                Name:
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+              </label>
+              <label>
+                Email:
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+              </label>
+              <label>
+                Message:
+                <textarea value={message} onChange={(e) => setMessage(e.target.value)} required />
+              </label>
+              <button type="submit">Send Message</button>
+            </form>
+          </animated.div>
+        )}
+      </div>
+      <br />
+      <ResumeButton />
     </motion.div>
-  
   );
 };
 
